@@ -83,6 +83,6 @@ The following properties can be configured:
 
 ---
 <p align="center">
-    <img src=".github/monkey_bw_2.png" style="width:100px; margin-bottom: 10px" /><br>
+    <a href="http://www.toonapi.com"><img src=".github/monkey_bw_2.png" style="width:100px; margin-bottom: 10px" /><br></a>
     This module is powered by the Toon® API.
 </p>
