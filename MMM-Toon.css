@@ -1,0 +1,49 @@
+/*.MMM-Toon table {
+	border: 1px solid red;
+}
+.MMM-Toon table tr {
+	border: 1px solid green;
+}
+.MMM-Toon table tr td{
+	border: 1px solid blue;
+}*/
+.MMM-Toon table {
+	margin: 0px;
+	padding: 0px;
+}
+.MMM-Toon table .icon {
+	width: 1px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 5px;
+}
+.MMM-Toon table .value {
+	width: 1px;
+    white-space: nowrap;
+    padding-right: 10px;
+    text-align: left;
+}
+.MMM-Toon table .graph {
+	position: relative;
+	padding: 3px;
+}
+.MMM-Toon .bar {
+	position: absolute;
+	top: 5px;
+	bottom: 5px;
+	left: 0px;
+	width: 100%;
+	padding-bottom: 2px;
+	/*background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAABCAYAAAD9yd/wAAAAFUlEQVQImWP8////fwYoYGRkZISxAVoCBAK79IQ7AAAAAElFTkSuQmCC');*/
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAADklEQVQImWP4DwUMUAAAY60H+f+wBJgAAAAASUVORK5CYII=')
+
+
+}
+
+.MMM-Toon .bar-background {
+	opacity: 0.2;
+}
+.MMM-Toon .heat-icon {
+	font-size: 20px;
+}
