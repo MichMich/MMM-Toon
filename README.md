@@ -64,11 +64,11 @@ The following properties can be configured:
 
 		<tr>
 			<td><code>apiKey</code></td>
-			<td><b>Required</b></code> - Your Toon API Key. Obtained from [toonapi.com](http://toonapi.com).</td>
+			<td><b>Required</b></code> - Your Toon API Key. Obtained from <a href="http://toonapi.com">toonapi.com</a>.</td>
 		</tr>
         <tr>
 			<td><code>apiSecret</code></td>
-			<td><b>Required</b></code> - Your Toon API Secret. Obtained from [toonapi.com](http://toonapi.com).</td>
+			<td><b>Required</b></code> - Your Toon API Secret. Obtained from <a href="http://toonapi.com">toonapi.com</a>.</td>
 		</tr>
         <tr>
 			<td><code>username</code></td>
