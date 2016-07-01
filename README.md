@@ -1,5 +1,5 @@
 # Module: MMM-Toon
-This MagicMirror modules allows you to show your processor temperature on you mirror. Currently it only works with a Raspberry Pi.
+This MagicMirror modules allows you to show Toon data on your MagicMirror.
 
 ## Example
 
