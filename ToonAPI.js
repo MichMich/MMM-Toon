@@ -61,7 +61,7 @@ var ToonAPI = (function() {
 
 		options = extend(defaultOptions, options);
 
-		//console.log("Make request: " + options.path + " (" + options.method + ")");
+		console.log("Make request: " + options.path + " (" + options.method + ")");
 
 		// Update Content-Type header
 		options.headers  = extend(options.headers, {

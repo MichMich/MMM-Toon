@@ -1,3 +1,6 @@
 {
-  "CONFIG_MISSING": "Please configure the API Key & Secret and the Username & Password."
+  "CONFIG_MISSING": "Please configure the API Key & Secret and the Username & Password.",
+  "POWER_USAGE": "Power usage:",
+  "GAS_USAGE": "Gas usage:"
+
 }

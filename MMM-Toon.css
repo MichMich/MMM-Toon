@@ -11,6 +11,11 @@
 	margin: 0px;
 	padding: 0px;
 }
+.MMM-Toon table td {
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
 .MMM-Toon table .icon {
 	width: 1px;
     white-space: nowrap;
@@ -40,10 +45,31 @@
 
 
 }
+/*
+.MMM-Toon .current-temperature {
+	display: block;
+}
+
+.MMM-Toon .target-temperature {
+	position: absolute;
+	right: 0px;
+	top: 40px;
+}*/
+.MMM-Toon .header {
+	padding-top: 10px;
+	text-transform: uppercase;
+}
+.MMM-Toon .logo {
+	float: left;
+}
 
 .MMM-Toon .bar-background {
 	opacity: 0.2;
 }
 .MMM-Toon .heat-icon {
 	font-size: 20px;
+}
+
+.MMM-Toon td {
+	/*border: 1px solid red;*/
 }

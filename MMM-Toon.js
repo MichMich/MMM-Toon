@@ -54,8 +54,6 @@ Module.register("MMM-Toon",{
 		if (notification === "STATUS") {
 			var status = payload;
 
-			//console.log(status);
-
 			if (status.thermostatInfo) {
 				this.toonData.currentTemperature = status.thermostatInfo.currentDisplayTemp / 100;
 				this.toonData.targetTemperature = status.thermostatInfo.currentSetpoint / 100;
@@ -101,10 +99,21 @@ Module.register("MMM-Toon",{
 
 		var wrapper = document.createElement("table");
 
+
+
 		var temperatureRow = document.createElement("tr");
+
+		var logoCell = document.createElement("td");
+		temperatureRow.appendChild(logoCell);
+		logoCell.colSpan = 2;
+
+		var logo = document.createElement("img");
+		logo.src = this.file('images/eneco.png');
+		logoCell.appendChild(logo);
+		logo.className = "logo";
+
 		var temperatureCell =  document.createElement("td");
 		temperatureRow.appendChild(temperatureCell);
-		temperatureCell.colSpan = 3;
 		temperatureCell.className = "";
 
 		//Target Temperature
@@ -117,20 +126,34 @@ Module.register("MMM-Toon",{
 
 		var targetTemperature = document.createElement("span");
 		targetTemperature.className = "small target-temperature";
+		if (this.toonData.targetTemperature > this.toonData.currentTemperature) {
+			targetTemperature.appendChild(heatOnIcon);
+		}
 		targetTemperature.innerHTML += " " + this.toonData.targetTemperature + "°";
 
-		if (this.toonData.targetTemperature > this.toonData.currentTemperature) {
-			temperatureCell.appendChild(heatOnIcon);
-		}
 		temperatureCell.appendChild(targetTemperature);
 		temperatureCell.appendChild(currentTemperature);
 
 		wrapper.appendChild(temperatureRow);
+		wrapper.appendChild(this.createHeaderRow(this.translate("POWER_USAGE")));
 		wrapper.appendChild(this.createBarGraphTR("power-off", this.toonData.currentElectricity + " W", this.toonData.currentElectricityPercentage));
 		wrapper.appendChild(this.createBarGraphTR("plug", this.toonData.electricityToday + " kWh", this.toonData.electricityTodayPercentage));
+		wrapper.appendChild(this.createHeaderRow(this.translate("GAS_USAGE")));
 		wrapper.appendChild(this.createBarGraphTR("fire", this.toonData.gasToday + " m³", this.toonData.gasTodayPercentage));
 
 		return wrapper;
+	},
+
+
+	createHeaderRow: function(header) {
+		var tr = document.createElement('tr');
+		var td = document.createElement('td');
+		td.colSpan = 3;
+		td.innerHTML = header;
+		td.className = "header xsmall align-left dimmed";
+
+		tr.appendChild(td);
+		return tr;
 	},
 
 	/**
