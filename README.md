@@ -1,6 +1,18 @@
 # Module: MMM-Toon
 This MagicMirror modules allows you to show your processor temperature on you mirror. Currently it only works with a Raspberry Pi.
 
+## Example
+
+![](.github/example.png)
+
+### The module displays the following information:
+
+* A symbol to show if the heater is currently active.
+* The target temperature.
+* The current temperature.
+* The current power consumption.
+* The total power consumption for the current day.
+* The total gas consumption for the current day.
 
 ## Installation
 
@@ -15,19 +27,6 @@ git clone https://github.com/MichMich/MMM-Toon.git
 ````
 
 Configure the module in your `config.js` file.
-
-## Example
-
-![](.github/example.png)
-
-### The module displays the following information:
-
-* A symbol to show if the heater is currently active.
-* The target temperature.
-* The current temperature.
-* The current power consumption.
-* The total power consumption for the current day.
-* The total gas consumption for the current day.
 
 ## Using the module
 
