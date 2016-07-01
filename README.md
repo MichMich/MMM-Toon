@@ -1,5 +1,5 @@
-# Module: MMM-Toon
-This MagicMirror modules allows you to show Toon data on your MagicMirror.
+# MagicMirror Module: MMM-Toon
+A Magic Mirror Module for your Toon® Smart Thermostat.
 
 ## Example
 
