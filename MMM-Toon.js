@@ -16,6 +16,7 @@ Module.register("MMM-Toon",{
 		updateInterval: 3000
 	},
 
+	// Store the toon data in an object.
 	toonData: {
 		currentTemperature: 0,
 		targetTemperature: 0,
@@ -27,12 +28,15 @@ Module.register("MMM-Toon",{
 		gasTodayPercentage: 0
 	},
 
+	// A loading boolean.
 	loading: true,
 
+	// Subclass getStyles method.
 	getStyles: function() {
 	    return ['font-awesome.css','MMM-Toon.css'];
 	},
 
+	// Subclass getTranslations method.
 	getTranslations: function() {
 	    return {
 	            en: "translations/en.json",
@@ -40,10 +44,12 @@ Module.register("MMM-Toon",{
 	    };
 	},
 
+	// Subclass start method.
 	start: function() {
 		this.sendSocketNotification("CONFIG", this.config);
 	},
 
+	// Subclass socketNotificationReceived method.
 	socketNotificationReceived: function(notification, payload) {
 		if (notification === "STATUS") {
 			var status = payload;
@@ -127,6 +133,14 @@ Module.register("MMM-Toon",{
 		return wrapper;
 	},
 
+	/**
+	 * createBarGraphTR
+	 * This method creates a table row with a bar graph based on the icon, the lable and a percentage.
+	 * @param  {string} icon       the font awesome icon. (without 'fa-')
+	 * @param  {string} label      the label in front of the basr graph.
+	 * @param  {number} percentage the percentage of the bar graph
+	 * @return {dom object}            the table row
+	 */
 	createBarGraphTR: function(icon, label, percentage) {
 		if (percentage > 100) {
 			percentage = 100;

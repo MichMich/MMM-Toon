@@ -43,6 +43,10 @@ module.exports = NodeHelper.create({
 		}
 	},
 
+	/**
+	 * fetchStatus
+	 * Request new status drom the Toon API and broadcast it to the MagicMirror module if it's received.
+	 */
     fetchStatus: function() {
         var self = this;
         this.fetcherRunning = true;

@@ -24,6 +24,11 @@ var ToonAPI = (function() {
 
 	/// Private Methods
 
+	/**
+	 * makeRequest
+	 * Makes a request to the Toon API server. It can be used for both the API requests as well as the oAuth requests.
+	 * @param  {Object} options request options.
+	 */
 	function makeRequest(options) {
 
 		if (!APIKEY || !APISECRET) {
@@ -147,9 +152,13 @@ var ToonAPI = (function() {
 		}
 
 		request.end();
-
 	}
 
+	/**
+	 * makeApiRequest
+	 * Makes a request to the Toon JSON api.
+	 * @param  {options} options request options.
+	 */
 	function makeApiRequest(options) {
 		if (!accessToken) {
 			console.log("No Access Token. Request one ...");
@@ -176,6 +185,11 @@ var ToonAPI = (function() {
 		makeRequest(options);
 	}
 
+	/**
+	 * makeSimpleApiRequest
+	 * @param  {string}   endpoint The endpoint of the API.
+	 * @param  {Function} callback The callback after completion.
+	 */
 	function makeSimpleApiRequest(endpoint, callback) {
 		callback = callback || function() {};
 		makeApiRequest({
@@ -184,6 +198,11 @@ var ToonAPI = (function() {
 		});
 	}
 
+	/**
+	 * requestAccessToken
+	 * request a new access token.
+	 * @param  {Function} callback The callback after the access token is received.
+	 */
 	function requestAccessToken(callback) {
 		console.log("Request Access Token.");
 
@@ -228,6 +247,11 @@ var ToonAPI = (function() {
 		});
 	}
 
+	/**
+	 * activateFirstAgreement
+	 * Activates the first agreement for the current user.
+	 * @param  {Function} callback Callback after the agreement is activted.
+	 */
 	function activateFirstAgreement(callback) {
 		self.getAgreements(function(agreements) {
 			if (agreements && agreements.length > 0) {
@@ -243,11 +267,24 @@ var ToonAPI = (function() {
 	/// Public Methods
 
 	// Username & Password
+
+	/**
+	 * setUsernamePassword
+	 * Set the username and password.
+	 * @param  {string} u Username.
+	 * @param  {string} p Password.
+	 */
 	self.setUsernamePassword = function(u, p) {
 		username = u;
 		password = p;
 	};
 
+	/**
+	 * setApiKeySecret
+	 * Set the API Key and Secret.
+	 * @param  {string} k API Key.
+	 * @param  {string} s API Secret.
+	 */
 	self.setApiKeySecret = function(k, s) {
 		accessToken = false;
 		APIKEY = k;
@@ -256,10 +293,21 @@ var ToonAPI = (function() {
 
 	// Agreements
 
+	/**
+	 * getAgreements
+	 * Get the all the agreements for the current user.
+	 * @param  {Function} callback The callback after the agreements are received.
+	 */
 	self.getAgreements = function(callback) {
 		makeSimpleApiRequest('agreements', callback);
 	};
 
+	/**
+	 * setAgreement
+	 * Set an agreement as the active agreement.
+	 * @param  {string}   agreementId The agreementId for the desired active agreement.
+	 * @param  {Function} callback    The callback after the agreement is activated.
+	 */
 	self.setAgreement = function(agreementId, callback) {
 		console.log('Set agreement:' + agreementId);
 		makeApiRequest({
@@ -276,38 +324,78 @@ var ToonAPI = (function() {
 
 	// Consumption
 
+	/**
+	 * getConsumptionElectricityFlows
+	 * Request the consumption electricity flows.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getConsumptionElectricityFlows = function(callback) {
 		makeSimpleApiRequest('consumption/electricity/flows', callback);
 	};
 
+	/**
+	 * getConsumptionElectricityData
+	 * Request the consumption electricity data.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getConsumptionElectricityData = function(callback) {
 		makeSimpleApiRequest('consumption/electricity/data', callback);
 	};
 
+	/**
+	 * getConsumptionDistrictheatData
+	 * Request the consumption district heat data.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getConsumptionDistrictheatData = function(callback) {
 		makeSimpleApiRequest('consumption/districtheat/data', callback);
 	};
 
+	/**
+	 * getConsumptionGasFlows
+	 * Request the consumption gas flows.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getConsumptionGasFlows = function(callback) {
 		makeSimpleApiRequest('consumption/gas/flows', callback);
 	};
 
+	/**
+	 * getConsumptionGasData
+	 * Request the consumption gas data.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getConsumptionGasData = function(callback) {
 		makeSimpleApiRequest('consumption/gas/data', callback);
 	};
 
 	// Temperature
 
+	/**
+	 * getTemperatureStates
+	 * Request the temperature states.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getTemperatureStates = function(callback) {
 		makeSimpleApiRequest('temperature/states', callback);
 	};
 
+	/**
+	 * getTemperaturePrograms
+	 * Request the temperature programs.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getTemperaturePrograms = function(callback) {
 		makeSimpleApiRequest('temperature/programs', callback);
 	};
 
 	// Status
 
+	/**
+	 * getStatus
+	 * Request the current status.
+	 * @param  {Function} callback The callback after the data is received.
+	 */
 	self.getStatus = function(callback) {
 		makeSimpleApiRequest('status', function(data) {
 			if (!data) {
