@@ -1,5 +1,5 @@
 # MagicMirror Module: MMM-Toon
-A Magic Mirror Module for your Toon® Smart Thermostat.
+A MagicMirror Module for your Toon® Smart Thermostat.
 
 ## Example
 
