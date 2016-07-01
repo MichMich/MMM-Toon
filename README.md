@@ -1,4 +1,4 @@
-# Module: MMM-SystemTemperature
+# Module: MMM-Toon
 This MagicMirror modules allows you to show your processor temperature on you mirror. Currently it only works with a Raspberry Pi.
 
 
@@ -83,6 +83,6 @@ The following properties can be configured:
 
 ---
 <p align="center">
-    This module is powered by the Toon® API.<br>
-    <img src=".github/monkey_bw_2.png" style="width:100px; margin-top: 10px" />
+    <img src=".github/monkey_bw_2.png" style="width:100px; margin-bottom: 10px" /><br>
+    This module is powered by the Toon® API.
 </p>
