@@ -82,7 +82,7 @@ The following properties can be configured:
 </table>
 
 ---
-<p style="text-align: center;">
+<p align="center">
     This module is powered by the Toon® API.<br>
-    <img src=".github/monkey_bw_2.svg" />
+    <img src=".github/monkey_bw_2.svg" style="width:100px; margin-top: 10px" />
 </p>
