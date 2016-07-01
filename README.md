@@ -20,7 +20,7 @@ Configure the module in your `config.js` file.
 
 ![](.github/example.png)
 
-The module displays the following information:
+### The module displays the following information:
 
 * A symbol to show if the heater is currently active.
 * The target temperature.
