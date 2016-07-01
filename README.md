@@ -84,5 +84,5 @@ The following properties can be configured:
 ---
 <p align="center">
     This module is powered by the Toon® API.<br>
-    <img src=".github/monkey_bw_2.svg" style="width:100px; margin-top: 10px" />
+    <img src=".github/monkey_bw_2.png" style="width:100px; margin-top: 10px" />
 </p>
