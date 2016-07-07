@@ -108,7 +108,7 @@ Module.register("MMM-Toon",{
 		logoCell.colSpan = 2;
 
 		var logo = document.createElement("img");
-		logo.src = this.file('images/eneco.png');
+		logo.src = this.file('images/toon.png');
 		logoCell.appendChild(logo);
 		logo.className = "logo";
 
