@@ -59,7 +59,6 @@ The following properties can be configured:
 		</tr>
 	</thead>
 	<tbody>
-
 		<tr>
 			<td><code>apiKey</code></td>
 			<td><b>Required</b></code> - Your Toon API Key. Obtained from <a href="http://toonapi.com">toonapi.com</a>.</td>
