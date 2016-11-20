@@ -52,28 +52,27 @@ The following properties can be configured:
 
 
 <table width="100%">
-	<!-- why, markdown... -->
 	<thead>
 		<tr>
 			<th>Option</th>
 			<th width="100%">Description</th>
 		</tr>
-	<thead>
+	</thead>
 	<tbody>
 
 		<tr>
 			<td><code>apiKey</code></td>
 			<td><b>Required</b></code> - Your Toon API Key. Obtained from <a href="http://toonapi.com">toonapi.com</a>.</td>
 		</tr>
-        <tr>
+        	<tr>
 			<td><code>apiSecret</code></td>
 			<td><b>Required</b></code> - Your Toon API Secret. Obtained from <a href="http://toonapi.com">toonapi.com</a>.</td>
 		</tr>
-        <tr>
+        	<tr>
 			<td><code>username</code></td>
 			<td><b>Required</b></code> - Your Toon username.</td>
 		</tr>
-        <tr>
+        	<tr>
 			<td><code>password</code></td>
 			<td><b>Required</b></code> - Your Toon password.</td>
 		</tr>
