@@ -137,7 +137,7 @@ Module.register("MMM-Toon",{
 		wrapper.appendChild(temperatureRow);
 		wrapper.appendChild(this.createHeaderRow(this.translate("POWER_USAGE")));
 		wrapper.appendChild(this.createBarGraphTR("power-off", this.toonData.currentElectricity + " W", this.toonData.currentElectricityPercentage));
-		wrapper.appendChild(this.createBarGraphTR("plug", this.toonData.electricityToday + " kWh", this.toonData.electricityTodayPercentage));
+		wrapper.appendChild(this.createBarGraphTR("plug", this.toonData.electricityToday + " Wh", this.toonData.electricityTodayPercentage));
 		wrapper.appendChild(this.createHeaderRow(this.translate("GAS_USAGE")));
 		wrapper.appendChild(this.createBarGraphTR("fire", this.toonData.gasToday + " m³", this.toonData.gasTodayPercentage));
 
