@@ -23,15 +23,8 @@ module.exports = NodeHelper.create({
             console.log("Toon config received!");
 
 			this.config = payload;
-            if (this.config.apiKey && this.config.apiSecret) {
-                ToonAPI.setApiKeySecret(this.config.apiKey, this.config.apiSecret);
-            }
-
-            if (this.config.username && this.config.password) {
-                ToonAPI.setUsernamePassword(this.config.username, this.config.password);
-            }
-
-            if (this.config.apiKey && this.config.apiSecret && this.config.username && this.config.password) {
+            if (this.config.apiKey && this.config.apiSecret && this.config.accessToken) {
+                ToonAPI.setApiKeySecret(this.config.apiKey, this.config.apiSecret, this.config.accessToken);
                 if (!this.fetcherRunning) {
                     this.fetchStatus();
                 }

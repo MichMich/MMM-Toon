@@ -81,9 +81,7 @@ Module.register("MMM-Toon",{
 	getDom: function() {
 
 		if (this.config.apiKey.length <= 0 ||
-			this.config.apiSecret.length <= 0 ||
-			this.config.username.length <= 0 ||
-			this.config.password.length <= 0) {
+			this.config.apiSecret.length <= 0) {
 				var errorWrapper = document.createElement("div");
 				errorWrapper.innerHTML = this.translate("CONFIG_MISSING");
 				errorWrapper.className = "small dimmed light";
@@ -139,7 +137,7 @@ Module.register("MMM-Toon",{
 		wrapper.appendChild(this.createBarGraphTR("power-off", this.toonData.currentElectricity + " W", this.toonData.currentElectricityPercentage));
 		wrapper.appendChild(this.createBarGraphTR("plug", this.toonData.electricityToday + " Wh", this.toonData.electricityTodayPercentage));
 		wrapper.appendChild(this.createHeaderRow(this.translate("GAS_USAGE")));
-		wrapper.appendChild(this.createBarGraphTR("fire", this.toonData.gasToday + " m³", this.toonData.gasTodayPercentage));
+		wrapper.appendChild(this.createBarGraphTR("fire", (this.toonData.gasToday / 1000) + " m³", this.toonData.gasTodayPercentage));
 
 		return wrapper;
 	},
